@@ -5,6 +5,7 @@
 # This code remove Profile * and remove files into a specific directories. 
 # Activate removing the flag: -WhatIf
 # Change <user> to your User's name
+# Make a copy of 'Local State' in the same folder as 'origLocal State'
 
 
 # Forzar codificación universal para evitar problemas con acentos
