@@ -29,6 +29,6 @@ foreach ($SelectLocation in $PathToClean) {
   else {
     Write-Host "Eliminando contenido de la carpeta: $($SelectLocation)" -ForegroundColor Red
     Get-ChildItem -Path $SelectLocation -Recurse | Where-Object { $_.Name -notlike "*conservar*" -and $_.Extension -ne ".Ink" } | 
-    Remove-Item # -Force -ErrorAction SilentlyContinue
+    Remove-Item -Force -ErrorAction SilentlyContinue
   }
 }
