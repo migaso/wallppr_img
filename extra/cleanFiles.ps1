@@ -24,7 +24,7 @@ $PathToClean = @(
 foreach ($SelectLocation in $PathToClean) {
   if ($SelectLocation -ne "$Local_dir\Desktop") {
     Write-Host "Eliminando contenido de la carpeta: $($SelectLocation)" -ForegroundColor Red
-    Remove-Item -Path "$SelectLocation\*" -Recurse  # -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path "$SelectLocation\*" -Recurse -Force -ErrorAction SilentlyContinue
   }
   else {
     Write-Host "Eliminando contenido de la carpeta: $($SelectLocation)" -ForegroundColor Red
