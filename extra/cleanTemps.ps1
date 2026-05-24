@@ -1,4 +1,4 @@
-# Created by @migaso - github - 202605
+﻿# Created by @migaso - github - 202605
 #
 # powershell.exe -ExecutionPolicy Bypass -F ".\cleanTemps.ps1"
 # OR
@@ -25,4 +25,4 @@ $FechaLimite = (Get-Date).AddDays(-1)
 # Busca y elimina los archivos que superan 1 día
 Write-Host "Limpiando temporales con más de un día de antigüedad..." -ForegroundColor Cyan
 Get-ChildItem -Path $RutaTemp -Recurse -File | Where-Object { $_.LastWriteTime -lt $FechaLimite } | 
-Remove-Item -Force -ErrorAction SilentlyContinue
+Remove-Item -WhatIf -Force -ErrorAction SilentlyContinue
