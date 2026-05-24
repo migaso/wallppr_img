@@ -32,3 +32,6 @@ foreach ($SelectLocation in $PathToClean) {
     Remove-Item -Force -ErrorAction SilentlyContinue
   }
 }
+
+Write-Host "Limpiando papelera de reciclaje..." -ForegroundColor Yellow
+Clear-RecycleBin -Force -ErrorAction SilentlyContinue
