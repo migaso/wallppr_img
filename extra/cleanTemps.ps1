@@ -16,7 +16,8 @@ $Local_dir="C:\Users\PILARES"
 $RutaTemp = @(
     # [System.IO.Path]::GetTempPath(),
     "$Local_dir\AppData\Local\Temp",
-    "C:\Windows\Temp"
+    "C:\Windows\Temp",
+    "C:\Windows\Prefetch"
 )
 
 # Calcula la fecha límite (hace 1 día)
