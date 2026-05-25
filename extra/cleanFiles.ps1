@@ -18,7 +18,7 @@ $PathToClean = @(
   "$Local_dir\Music",
   "$Local_dir\Videos",
   "$Local_dir\Downloads",
-  "$Local_dir\AppData\Roaming\Microsoft\Windows\Recent", 
+  "$Local_dir\AppData\Roaming\Microsoft\Windows\Recent",
   "$Local_dir\Desktop"
 )
 
@@ -30,7 +30,7 @@ foreach ($SelectLocation in $PathToClean) {
   else {
     Write-Host "Eliminando contenido de la carpeta: $($SelectLocation)" -ForegroundColor Red
     Get-ChildItem -Path $SelectLocation -Recurse | Where-Object { $_.Name -notlike "*conservar*" -and $_.Extension -ne ".Ink" } | 
-    Remove-Item -Force -ErrorAction SilentlyContinue
+    Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
   }
 }
 
