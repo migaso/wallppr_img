@@ -15,6 +15,6 @@ IF EXIST "C:\wallppr_img\extra" (
 
 schtasks /query /tn "cleanCustomProcess" >nul 2>&1
 IF %errorlevel% neq 0 (
-  schtasks /create /tn "cleanCustomProcess" /tr "C:\Dev\wallppr_img\extra\task.bat" /sc onstart /ru System
+  schtasks /create /tn "cleanCustomProcess" /tr "C:\wallppr_img\extra\task.bat" /sc onstart /ru System
 )
 exit
