@@ -18,7 +18,7 @@ $PathToClean = @(
   "$Local_dir\Music",
   "$Local_dir\Videos",
   "$Local_dir\Downloads",
-  "$Local_dir\Microsoft\Windows\Recent",
+  "$Local_dir\AppData\Local\Microsoft\Windows\Recent",
   "$Local_dir\Desktop"
 )
 
