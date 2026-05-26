@@ -10,7 +10,7 @@ IconResource=%SystemRoot%\system32\imageres.dll,-184
 
 # Crea el archivo con codificación UTF-8 o Unicode
 $rutaIni = Join-Path $rutaCarpeta "desktop.ini"
-Set-Content -Path $rutaIni -Value $contenido -Encoding UTF-8
+Set-Content -Path $rutaIni -Value $contenido -Encoding UTF8
 
 # Aplica los atributos obligatorios de Windows
 Set-ItemProperty -Path "$rutaCarpeta\desktop.ini" -Name Attributes -Value "Hidden, System"
@@ -28,7 +28,7 @@ IconResource=%SystemRoot%\system32\imageres.dll,-112
 
 # Crea el archivo con codificación UTF-8 o Unicode
 $rutaIni = Join-Path $rutaCarpeta "desktop.ini"
-Set-Content -Path $rutaIni -Value $contenido -Encoding UTF-8
+Set-Content -Path $rutaIni -Value $contenido -Encoding UTF8
 
 # Aplica los atributos obligatorios de Windows
 Set-ItemProperty -Path "$rutaCarpeta\desktop.ini" -Name Attributes -Value "Hidden, System"
@@ -46,7 +46,7 @@ IconResource=%SystemRoot%\system32\imageres.dll,-183
 
 # Crea el archivo con codificación UTF-8 o Unicode
 $rutaIni = Join-Path $rutaCarpeta "desktop.ini"
-Set-Content -Path $rutaIni -Value $contenido -Encoding UTF-8
+Set-Content -Path $rutaIni -Value $contenido -Encoding UTF8
 
 # Aplica los atributos obligatorios de Windows
 Set-ItemProperty -Path "$rutaCarpeta\desktop.ini" -Name Attributes -Value "Hidden, System"
@@ -65,7 +65,7 @@ IconResource=%SystemRoot%\system32\imageres.dll,-113
 
 # Crea el archivo con codificación UTF-8 o Unicode
 $rutaIni = Join-Path $rutaCarpeta "desktop.ini"
-Set-Content -Path $rutaIni -Value $contenido -Encoding UTF-8
+Set-Content -Path $rutaIni -Value $contenido -Encoding UTF8
 
 # Aplica los atributos obligatorios de Windows
 Set-ItemProperty -Path "$rutaCarpeta\desktop.ini" -Name Attributes -Value "Hidden, System"
