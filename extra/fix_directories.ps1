@@ -77,7 +77,8 @@ $rutaCarpeta = "C:\Users\PILARES\Music"
 # Crea el contenido del archivo desktop.ini
 $contenido = @"
 [.ShellClassInfo]
-IconResource=%SystemRoot%\system32\imageres.dll,-108
+LocalizedResourceName=@shell32.dll,-21798
+IconResource=%SystemRoot%\system32\imageres.dll,-103
 [ViewState]
 Mode=
 Vid=
