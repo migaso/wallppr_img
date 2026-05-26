@@ -69,3 +69,25 @@ Set-Content -Path $rutaIni -Value $contenido -Encoding UTF8
 
 # Aplica los atributos obligatorios de Windows
 Set-ItemProperty -Path "$rutaCarpeta\desktop.ini" -Name Attributes -Value "Hidden, System"
+
+# --
+# Define la ruta de la carpeta donde quieres el archivo
+$rutaCarpeta = "C:\Users\PILARES\Music"
+
+# Crea el contenido del archivo desktop.ini
+$contenido = @"
+[.ShellClassInfo]
+IconResource=%SystemRoot%\system32\imageres.dll,-108
+[ViewState]
+Mode=
+Vid=
+FolderType=Music
+"@
+
+# Crea el archivo con codificación UTF-8 o Unicode
+$rutaIni = Join-Path $rutaCarpeta "desktop.ini"
+Set-Content -Path $rutaIni -Value $contenido -Encoding UTF8
+
+# Aplica los atributos obligatorios de Windows
+Set-ItemProperty -Path "$rutaCarpeta\desktop.ini" -Name Attributes -Value "Hidden, System"
+
