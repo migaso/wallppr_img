@@ -14,10 +14,10 @@
 # Define la ruta de la carpeta temporal (%TEMP%)
 $Local_dir="C:\Users\PILARES"
 $RutaTemp = @(
-    # [System.IO.Path]::GetTempPath(),
     "$Local_dir\AppData\Local\Temp",
     "C:\Windows\Temp",
-    "C:\Windows\Prefetch"
+    # "C:\Windows\Prefetch" # clean every 1 or 2 months
+    # [System.IO.Path]::GetTempPath(),
 )
 
 # Calcula la fecha límite (hace 1 día)
@@ -25,5 +25,7 @@ $FechaLimite = (Get-Date).AddDays(-1)
 
 # Busca y elimina los archivos que superan 1 día
 Write-Host "Limpiando temporales con más de un día de antigüedad..." -ForegroundColor Cyan
-Get-ChildItem -Path $RutaTemp -Recurse -File | Where-Object { $_.LastWriteTime -lt $FechaLimite } | 
-Remove-Item -Force -ErrorAction SilentlyContinue
+foreach ($SelectTemp in $RutaTemp) {
+ Get-ChildItem -Path $SelectTemp -Recurse -File | Where-Object { $_.LastWriteTime -lt $FechaLimite } | 
+ Remove-Item -Force -ErrorAction SilentlyContinue
+}
