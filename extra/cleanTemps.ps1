@@ -12,12 +12,12 @@
 # Change <user> to your User's name
 
 # Define la ruta de la carpeta temporal (%TEMP%)
-$Local_dir="C:\Users\PILARES"
+$Local_dir="C:\Users\migas"
 $RutaTemp = @(
     "$Local_dir\AppData\Local\Temp",
-    "C:\Windows\Temp",
-    # "C:\Windows\Prefetch" # clean every 1 or 2 months
-    # [System.IO.Path]::GetTempPath(),
+    # "C:\Windows\Prefetch", # clean every 1 or 2 months
+    "C:\Windows\Temp"
+    # [System.IO.Path]::GetTempPath()
 )
 
 # Calcula la fecha límite (hace 1 día)
