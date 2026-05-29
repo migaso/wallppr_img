@@ -12,7 +12,7 @@
 # Change <user> to your User's name
 
 # Define la ruta de la carpeta temporal (%TEMP%)
-$Local_dir="C:\Users\migas"
+$Local_dir="C:\Users\PILARES"
 $RutaTemp = @(
     "$Local_dir\AppData\Local\Temp",
     # "C:\Windows\Prefetch", # clean every 1 or 2 months
