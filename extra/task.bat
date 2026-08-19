@@ -8,7 +8,6 @@ IF EXIST "C:\wallppr_img\extra" (
     powershell.exe -ExecutionPolicy Bypass -F "C:\wallppr_img\extra\cleanTemps.ps1"
     powershell.exe -ExecutionPolicy Bypass -F "C:\wallppr_img\extra\cleanFiles.ps1"
     powershell.exe -ExecutionPolicy Bypass -F "C:\wallppr_img\extra\restoreBrowsers.ps1"
-    :: call C:\wallppr_img\extra\turnoff\turnoff_task.bat
 ) ELSE (
     cd C:\wallppr_img
     %path_git%\git pull origin pilares_pelon
