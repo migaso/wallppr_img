@@ -16,4 +16,4 @@ echo - Lunes a Sábado a las 8:00 PM
 echo - Despertar equipo: Activado
 
 :: pause
-exit
+exit /b
