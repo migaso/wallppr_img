@@ -7,5 +7,8 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+echo.
+echo Tarea Apagar: Eliminada
+
 :: pause
 exit /b
