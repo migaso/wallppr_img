@@ -1,5 +1,6 @@
 @echo off
-schtasks /create /ru SYSTEM /tn "Apagar" /tr "shutdown /s /t 0" /sc weekly /d MON,TUE,WED,THU,FRI,SAT /st 20:00 /rl highest /f
+:: SAT
+schtasks /create /ru SYSTEM /tn "Apagar" /tr "shutdown /s /t 0" /sc weekly /d MON,TUE,WED,THU,FRI /st 20:00 /rl highest /f
 
 if %errorlevel% neq 0 (
     echo Error al crear la tarea. Asegúrate de ejecutar esto como Administrador.
@@ -12,7 +13,7 @@ powershell -Command "$t = Get-ScheduledTask -TaskName 'Apagar'; $t.Settings.Wake
 
 echo.
 echo Tarea configurada exitosamente:
-echo - Lunes a Sábado a las 8:00 PM
+echo - Lunes a Viernes a las 8:00 PM
 echo - Despertar equipo: Activado
 
 :: pause
